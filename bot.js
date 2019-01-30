@@ -4,15 +4,15 @@ const Rocket = new Discord.Client();
 const jimp = require("jimp");// npm i jimp
 const package = ('package.json');
 const yt = require('ytdl-core');
-const prefix = ("p!")
+const prefix = ("!")
 const child_process = require("child_process");
-const ownerid = ('280749272498962432')
+const ownerid = ('390636399340027906')
 const canvas = require("canvas");
 const fs = require('fs')
 const moment = require("moment");
 
 
-console.log("By OrochiX");
+console.log("By Txee");
 
 Rocket.on('ready', () => {//source
     console.log('╔[════════════════════════════════════]╗');
@@ -61,12 +61,12 @@ Rocket.on('message', async message => {
     let time = messageArray[2];
     if(message.content.startsWith(prefix + "ban")) {
        if(!message.guild.member(message.author).hasPermission("BAN_MEMBERS")) return message.channel.send("**- ما معك برمشن**");
-       if(!User) message.channel.send("**- منشن يلي تبي تبنده**");
-       if(User.id === client.user.id) return message.channel.send("**- ماتقدر تبند البوت**");
+       if(!User) message.channel.send("**- Mention Any One **");
+       if(User.id === client.user.id) return message.channel.send("**- لايمكنك تبنيد البوت**");
        if(User.id === message.guild.owner.id) return message.channel.send("**- ماتقدر تبند الاونر**");
        if(!time) return message.channel.send("**- اكتب الوقت**");
        if(!time.match(/[1-60][s,m,h,d,w]/g)) return message.channel.send('**- اكتب وقت حقيقي**');
-       if(!Reason) message.channel.send("**- اكتب السبب**");
+       if(!Reason) message.channel.send("**- اكتب سبب الباند**");
        let banEmbed = new Discord.RichEmbed()
        .setAuthor(`You have been banned from ${message.guild.name} !`)
        .setThumbnail(message.guild.iconURL || message.guild.avatarURL)
@@ -85,7 +85,7 @@ Rocket.on('message', async message => {
 
 Rocket.on('message', message => { //bc
         if(!message.channel.guild) return;
-    if(message.content.startsWith('p!bc')) {
+    if(message.content.startsWith('!bc')) {
     if(!message.channel.guild) return message.channel.send('**هذا الأمر فقط للسيرفرات**').then(m => m.delete(5000));
     if(!message.member.hasPermission('ADMINISTRATOR')) return      message.channel.send('**للأسف لا تمتلك صلاحية** `ADMINISTRATOR`' );
     let args = message.content.split(" ").join(" ").slice(2 + prefix.length);
@@ -126,7 +126,7 @@ Rocket.on('message', message => { //bc
     });
 
                         Rocket.on('message', message => { //bot
-                            if (message.content.startsWith("p!bot")) {
+                            if (message.content.startsWith("!bot")) {
                             message.channel.send({
                                 embed: new Discord.RichEmbed()
                                     .setAuthor(Rocket.user.username,Rocket.user.avatarURL)
@@ -220,7 +220,7 @@ if(msg.content.startsWith (prefix  + 'server')) {
 
 
 Rocket.on('message', message => {//av mension
-    if (message.content.startsWith("p!avatar")) {
+    if (message.content.startsWith("!avatar")) {
 
         var mentionned = message.mentions.users.first();
     var king66s;
@@ -374,7 +374,7 @@ Rocket.on('message', message => {//help msg
 
 
 
-  By : PlaTinUM TeaM | __**شكرا لكم لاستعمال البوت**__
+  By Txee | __**شكرا لكم لاستعمال البوت**__
 
 
   `);
@@ -385,7 +385,7 @@ Rocket.on('message', message => {//help msg
 
 
 Rocket.on('message', message => {//help
-     if (message.content === "p!help") {
+     if (message.content === "!help") {
   message.channel.send('**تم الارسال لك في الخاص | :ballot_box_with_check:**')
     }
 });
@@ -420,7 +420,7 @@ message.channel.sendEmbed(cat);
     }
 });
 Rocket.on('message', message => {//unmute
-    if (message.content.startsWith('p!unmute')) {
+    if (message.content.startsWith('!unmute')) {
   if (!message.member.hasPermission("MANAGE_CHANNELS")) return message.channel.send("**انت لا تمتلك الخاصيه المطلوبه** | ❎ ");
    let men = message.mentions.users.first()
    let mas = message.author
@@ -520,7 +520,7 @@ var currentTime = new Date(),
 ]
 
  Rocket.on('message', message => {//cuttweet
-   if (message.content.startsWith("p!cuttweet")) {
+   if (message.content.startsWith("!cuttweet")) {
                 if(!message.channel.guild) return message.reply('** This command only for servers**');
   var embed = new Discord.RichEmbed()
   .setColor('RANDOM')
@@ -533,7 +533,7 @@ var currentTime = new Date(),
 });
 Rocket.on('message', message => {//color
     let args = message.content.split(' ').slice(1);
-if(message.content.split(' ')[0] == 'p!color'){
+if(message.content.split(' ')[0] == '!color'){
      const embedd = new Discord.RichEmbed()
 .setFooter('Requested by '+message.author.username, message.author.avatarURL)
 .setDescription(`**لايوجد لون بهذا الرقم ** :x:`)
@@ -568,7 +568,7 @@ setInterval(function(){})
 
 }
 });
-const adminprefix = "p!";
+const adminprefix = "!";
 const devs = ['429972030092476437'];
 Rocket.on('message', message => {//for dev
   var argresult = message.content.split(` `).slice(1).join(' ');
@@ -623,7 +623,7 @@ Rocket.on('message', function(message) {//roll
     Rocket.on("message", message => {    //serv-av
         if(!message.channel.guild) return;
  if(message.author.bot) return;
-    if(message.content === "p!serveravatar"){
+    if(message.content === "!serveravatar"){
         const embed = new Discord.RichEmbed()
 
     .setTitle(`صورة سيرفر : ** ${message.guild.name} **`)
@@ -1139,7 +1139,7 @@ Rocket.on('message', msg => {
             //outher_cummon
 
 
-          if(message.content === "p!qstop" ) {
+          if(message.content === "p!stop" ) {
                           var servers = {};
 
                     if (message.guild.voiceConnection) message.guild.voiceConnection.disconnect();
@@ -1537,7 +1537,7 @@ client.on('message' , message => {
  });
 
 
-    Rocket.login("Token");
+    Rocket.login("NTQwMTQ0MjAxOTAwMjI4NjA5.DzMoYQ.SzBRKqK4Z3PM6lkVBhzr3rjcmIg");
 
 
 
