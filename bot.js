@@ -1537,7 +1537,7 @@ client.on('message' , message => {
  });
 
 
-    Rocket.login("NTQwMTQ0MjAxOTAwMjI4NjA5.DzMoYQ.SzBRKqK4Z3PM6lkVBhzr3rjcmIg");
+    Rocket.login("Token");
 
 
 
